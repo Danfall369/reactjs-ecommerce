@@ -42,3 +42,53 @@
   background: #0989ff;
   color: #fff;
 }
+
+.product_type {
+  padding: 20px 30px;
+  width: 100%;
+}
+
+.product_type .container {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.product_type .container .box {
+  padding: 10px 20px;
+  margin-left: 10px;
+}
+
+.product_type .container .box .img_box {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background: #e8f4ff;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.product_type .container .box .img_box img {
+  height: 80px;
+  width: 80px;
+  align-items: center;
+  max-width: 100%;
+  justify-content: center;
+  margin-top: 50px;
+  margin-left: 55px;
+  transition: 0.5s;
+}
+
+.product_type .container .box .img_box img:hover {
+  transform: scale(1.3);
+}
+
+.product_type .container .box .detail {
+  max-width: 100%;
+  text-align: center;
+  align-items: center;
+}
+
+.product_type .container .box .detail p {
+  margin-top: 10px;
+  color: #9a9a9a;
+}
