@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.top_banner {
+  padding: 30px 40px;
+  width: 100%;
+  background: #e3edf6;
+}
+
+.top_banner .container {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top_banner .container .detail {
+  margin-top: 8%;
+  margin-left: 30px;
+}
+
+.top_banner .container .detail h2 {
+  font-size: 59px;
+  color: #010f1c;
+  margin-right: 50%;
+  margin-bottom: 50px;
+}
+
+.top_banner .container .detail .link {
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #010f1c;
+  background: #fff;
+  transition: 0.5s;
+}
+
+.top_banner .container .detail .link:hover {
+  background: #0989ff;
+  color: #fff;
+}
