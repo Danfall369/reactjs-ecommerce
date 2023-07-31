@@ -3,6 +3,9 @@ import './home.css'
 import { Link } from 'react-router-dom'
 import { BsArrowRight } from 'react-icons/bs'
 import { FiTruck } from 'react-icons/fi'
+import { BsCurrencyDollar } from 'react-icons/bs'
+import { CiPercent } from 'react-icons/ci'
+import { BiHeadphone } from 'react-icons/bi'
 
 const Home = () => {
     return (
@@ -36,7 +39,43 @@ const Home = () => {
                         <div className='icon'>
                             <FiTruck />
                         </div>
+                        <div className='detail'>
+                            <h3>Envio Gratis</h3>
+                            <p>En compras mayores a 20$</p>
+                        </div>
                     </div>
+                    <div className='box'>
+                        <div className='icon'>
+                            <BsCurrencyDollar />
+                        </div>
+                        <div className='detail'>
+                            <h3>Devoluciones & Rembolsos</h3>
+                            <p>Garantía de devolución del dinero</p>
+                        </div>
+                    </div>
+                    <div className='box'>
+                        <div className='icon'>
+                            <CiPercent />
+                        </div>
+                        <div className='detail'>
+                            <h3>Descuentos para Miembros</h3>
+                            <p>En cada pedido</p>
+                        </div>
+                    </div>
+                    <div className='box'>
+                        <div className='icon'>
+                            <BiHeadphone />
+                        </div>
+                        <div className='detail'>
+                            <h3>Soporte Tecnico</h3>
+                            <p>Disponibles en todo momento</p>
+                        </div>
+                    </div>
+                </div >
+            </div>
+            <div className='product'>
+                <div className='container'>
+                    <div className='box'></div>
                 </div>
             </div>
         </>

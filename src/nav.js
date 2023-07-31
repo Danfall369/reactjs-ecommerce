@@ -21,7 +21,7 @@ const Nav = () => {
             <div className='main_header'>
                 <div className='container'>
                     <div className='logo'>
-                        <img src='./img/logo.png' alt='logo' width='50px' />
+                        <img src='./img/logo.png' alt='logo' width='50px' /><p>Multitiendas E.A.F</p>
                     </div>
                     <div className='search_box'>
                         <input type='text' value='' placeholder='Ingresa el Nombre del Producto' autoComplete='off' />

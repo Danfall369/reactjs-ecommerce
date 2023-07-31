@@ -92,3 +92,43 @@
   margin-top: 10px;
   color: #9a9a9a;
 }
+
+.about {
+  padding: 40px 50px;
+  width: 100%;
+}
+
+.about .container {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about .container .box {
+  padding: 20px 30px;
+  display: flex;
+  background: #ecf2f7;
+  width: 270px;
+  height: 135px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.about .container .box .icon{
+  color: #e44c8c;
+  font-size: 32px;
+  margin-top: 10px;
+}
+
+.about .container .box .detail {
+  margin-top: 10px;;
+  margin-left: 10px;
+}
+
+.about .container .box .detail h3{
+  color: #010f1c;
+}
+
+.about .container .box .detail p{
+  color: #9a9a9a;
+}

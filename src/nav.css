@@ -36,6 +36,17 @@
   justify-content: space-between;
 }
 
+.main_header .container .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main_header .container .logo p {
+  font-size: 30px;
+}
+
 .main_header .container .search_box {
   margin-right: 30px;
 }
