@@ -3,9 +3,11 @@ import './home.css'
 import { Link } from 'react-router-dom'
 import { BsArrowRight } from 'react-icons/bs'
 import { FiTruck } from 'react-icons/fi'
-import { BsCurrencyDollar } from 'react-icons/bs'
+import { BsCurrencyDollar, BsEye } from 'react-icons/bs'
 import { CiPercent } from 'react-icons/ci'
 import { BiHeadphone } from 'react-icons/bi'
+import Homeproduct from './homeproduct'
+import { AiOutlineHeart, AiOutlineShoppingCart } from 'react-icons/ai'
 
 const Home = () => {
     return (
@@ -21,18 +23,18 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className='product_type'>
+            {/*             <div className='product_type'>
                 <div className='container'>
                     <div className='box'>
                         <div className='img_box'>
-                            <img src='./img/Product (1).jpg' alt='Products' />
+                            <img src='./img/Santoni Zafiro Arroz.jpg' alt='Products' />
                         </div>
                         <div className='detail'>
-                            <p>62 Productos</p>
+                            <p>61 Productos</p>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <div className='about'>
                 <div className='container'>
                     <div className='box'>
@@ -74,7 +76,29 @@ const Home = () => {
                 </div >
             </div>
             <div className='product'>
+                <h2>Pruductos Destacados</h2>
                 <div className='container'>
+                    {
+                        Homeproduct.map((curlElm) => {
+                            return (
+                                <div className='box' key={curlElm.id}>
+                                    <div className='img_box'>
+                                        <img src={curlElm.Img} alt={curlElm.Title} />
+                                        <div className='icon' >
+                                            <li><AiOutlineShoppingCart /></li>
+                                            <li><BsEye /></li>
+                                            <li><AiOutlineHeart /></li>
+                                        </div>
+                                    </div>
+                                    <div className='detail' >
+                                        <h3>{curlElm.Title}</h3>
+                                        <p>{curlElm.Can}</p>
+                                        <h4>{curlElm.Price}</h4>
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
                     <div className='box'></div>
                 </div>
             </div>
