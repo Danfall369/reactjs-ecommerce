@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.footer {
+  padding: 30px 40px;
+  width: 100%;
+  background: #ecf2f7;
+}
+
+.footer .container {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .container .about {
+  max-width: 30%;
+}
+.footer .container .about .logo {
+  display: flex;
+  align-items: center;
+  gap: 20px 30px;
+}
+
+.footer .container .about .logo P {
+  font-size: 30px;
+}
+
+.footer .container .about .detail p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #828282;
+}
+
+.footer .container .detail .icon {
+  margin-top: 20px;
+  display: flex;
+}
+
+.footer .container .detail .icon li {
+  margin-left: 20px;
+  list-style: none;
+  padding: 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transition: 0.5s;
+}
+
+.footer .container .detail .icon li:hover {
+  background: #0989ff;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.footer .container .account {
+  margin-right: 90px;
+  margin-top: 30px;
+}
+
+.footer .container .account h3 {
+  font-size: 32px;
+  color: #010f1c;
+}
+
+.footer .container .account ul {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.footer .container .account ul li {
+  margin-top: 5px;
+  color: #010f1c;
+  font-size: 14px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.footer .container .account ul li:hover {
+  color: #0989ff;
+}
+
+.footer .container .page {
+  margin-right: 90px;
+  margin-top: 30px;
+}
+
+.footer .container .page h3 {
+  font-size: 32px;
+  color: #010f1c;
+}
+
+.footer .container .page ul {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.footer .container .page ul li {
+  margin-top: 5px;
+  color: #010f1c;
+  font-size: 14px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.footer .container .page ul li:hover {
+  color: #0989ff;
+}

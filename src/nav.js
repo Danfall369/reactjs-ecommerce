@@ -55,7 +55,7 @@ const Nav = () => {
                                 <Link to='/' className='link'>Inicio</Link>
                             </li>
                             <li>
-                                <Link to='/product' className='link'>Producto</Link>
+                                <Link to='/product' className='link'>Productos</Link>
                             </li>
                             <li>
                                 <Link to='/about' className='link'>Sobre Nosotros</Link>
