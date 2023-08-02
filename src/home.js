@@ -110,7 +110,7 @@ const Home = () => {
                         <Link to="/product" className='link' >Comprar Ahora <BsArrowRight /></Link>
                     </div>
                     <div className='img_box'>
-                        <img src='https://tucentralonline.com/la-guaira-53/wp-content/uploads/sites/5/2022/05/100829191.jpg' alt='slideimg' width="360px" />
+                        <img src='https://o.remove.bg/downloads/01d9f127-f342-4beb-94fe-1d002deea7f3/Panelada_de_Limon-removebg-preview.png' alt='slideimg' width="360px" />
                     </div>
                 </div>
             </div >
