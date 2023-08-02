@@ -99,9 +99,21 @@ const Home = () => {
                             )
                         })
                     }
-                    <div className='box'></div>
                 </div>
             </div>
+            <div className='banner'>
+                <div className='container'>
+                    <div className='detail' >
+                        <h4>Ultimos Productos Agregados</h4>
+                        <h3>Panelada de Limon en Polvo</h3>
+                        <p>$ 5.99</p>
+                        <Link to="/product" className='link' >Comprar Ahora <BsArrowRight /></Link>
+                    </div>
+                    <div className='img_box'>
+                        <img src='https://tucentralonline.com/la-guaira-53/wp-content/uploads/sites/5/2022/05/100829191.jpg' alt='slideimg' width="360px" />
+                    </div>
+                </div>
+            </div >
         </>
     )
 }
