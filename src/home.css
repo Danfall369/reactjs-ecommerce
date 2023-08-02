@@ -114,21 +114,122 @@
   cursor: pointer;
 }
 
-.about .container .box .icon{
+.about .container .box .icon {
   color: #e44c8c;
   font-size: 32px;
   margin-top: 10px;
 }
 
 .about .container .box .detail {
-  margin-top: 10px;;
+  margin-top: 10px;
   margin-left: 10px;
 }
 
-.about .container .box .detail h3{
+.about .container .box .detail h3 {
   color: #010f1c;
 }
 
-.about .container .box .detail p{
+.about .container .box .detail p {
   color: #9a9a9a;
+}
+
+.product {
+  padding: 30px 40px;
+  width: 100%;
+}
+
+.product h2 {
+  font-size: 32px;
+  color: #010f1c;
+  margin-bottom: 20px;
+}
+
+.product .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.product .container .box {
+  padding: 10px 20px;
+  overflow: hidden;
+  width: 280px;
+  height: 350px;
+  border: 1px solid #e2e0e0;
+  margin-bottom: 20px;
+  transition: 0.5s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.product .container .box:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.product .container .box .img_box {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e2e0e0;
+}
+
+.product .container .box .img_box img {
+  width: 300px;
+  height: 250px;
+  margin-right: 50px;
+}
+
+.product .container .box .img_box .icon {
+  z-index: 1;
+  position: relative;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  transition: 0.5s;
+}
+
+.product .container .box .img_box:hover .icon {
+  transform: translateX(-90px);
+}
+
+.product .container .box .img_box .icon li {
+  list-style: none;
+  padding: 10px 10px;
+  color: #010f1c;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: #fff;
+  transition: 0.5s;
+}
+
+.product .container .box .img_box .icon li:hover {
+  background: #0989ff;
+  color: #fff;
+}
+
+.product .container .box .detail {
+  margin-top: 10px;
+}
+
+.product .container .box .detail p {
+  color: #9a9a9a;
+  font-size: 14px;
+}
+
+.product .container .box .detail h3 {
+  font-size: 18px;
+  margin-top: 5px;
+  color: #010f1c;
+  transition: 0.5s;
+}
+
+.product .container .box:hover .detail h3 {
+  color: #0989ff;
+}
+
+.product .container .box .detail h4 {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #0989ff;
+  letter-spacing: 1px;
 }
