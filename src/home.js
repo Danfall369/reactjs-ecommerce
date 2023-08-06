@@ -13,7 +13,7 @@ import {
   AiOutlineCloseCircle,
 } from "react-icons/ai";
 
-const Home = ({ detail, view, close, setClose }) => {
+const Home = ({ detail, view, close, setClose, addtocart }) => {
   return (
     <>
       {close ? (
@@ -116,7 +116,7 @@ const Home = ({ detail, view, close, setClose }) => {
                 <div className="img_box">
                   <img src={curlElm.Img} alt={curlElm.Title} />
                   <div className="icon">
-                    <li>
+                    <li onClick={() => addtocart(curlElm)}>
                       <AiOutlineShoppingCart />
                     </li>
                     <li onClick={() => view(curlElm)}>

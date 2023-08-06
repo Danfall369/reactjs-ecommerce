@@ -8,7 +8,15 @@ import {
 import { BsEye } from "react-icons/bs";
 import "./product.css";
 
-const Product = ({ product, setProduct, detail, view, close, setClose }) => {
+const Product = ({
+  product,
+  setProduct,
+  detail,
+  view,
+  close,
+  setClose,
+  addtocart,
+}) => {
   const filterproduct = (product) => {
     const update = Productdetails.filter((x) => {
       return x.Cat === product;
@@ -85,7 +93,7 @@ const Product = ({ product, setProduct, detail, view, close, setClose }) => {
                       <div className="img_box">
                         <img src={curlElm.Img} alt={curlElm.Title} />
                         <div className="icon">
-                          <li>
+                          <li onClick={() => addtocart(curlElm)}>
                             <AiOutlineShoppingCart />
                           </li>
                           <li onClick={() => view(curlElm)}>

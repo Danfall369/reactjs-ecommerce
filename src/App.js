@@ -6,6 +6,9 @@ import Footer from "./footer";
 import Productdetails from "./productdetail";
 
 const App = () => {
+  //add to cart
+  const [cart, setCart] = useState([]);
+
   //product detail
   const [close, setClose] = useState(false);
   const [detail, setDetail] = useState([]);
@@ -25,6 +28,19 @@ const App = () => {
     setClose(true);
   };
 
+  //add to cart
+  const addtocart = (product) => {
+    const exsit = cart.find((x) => {
+      return x.id === product.id;
+    });
+    if (exsit) {
+      alert("Este producto ya se encuentra agregado al carrito");
+    } else {
+      setCart([...cart, { ...product, qty: 1 }]);
+      alert("Producto agregado al carrito");
+    }
+  };
+
   return (
     <>
       <BrowserRouter>
@@ -36,6 +52,9 @@ const App = () => {
           view={view}
           close={close}
           setClose={setClose}
+          cart={cart}
+          setCart={setCart}
+          addtocart={addtocart}
         />
         <Footer />
       </BrowserRouter>

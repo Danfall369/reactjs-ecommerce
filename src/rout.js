@@ -2,8 +2,19 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./home";
 import Product from "./product";
+import Cart from "./cart";
 
-function Rout({ product, setProduct, detail, view, close, setClose }) {
+function Rout({
+  product,
+  setProduct,
+  detail,
+  view,
+  close,
+  setClose,
+  cart,
+  setCart,
+  addtocart,
+}) {
   return (
     <>
       <Routes>
@@ -15,6 +26,7 @@ function Rout({ product, setProduct, detail, view, close, setClose }) {
               view={view}
               close={close}
               setClose={setClose}
+              addtocart={addtocart}
             />
           }
         />
@@ -28,9 +40,11 @@ function Rout({ product, setProduct, detail, view, close, setClose }) {
               view={view}
               close={close}
               setClose={setClose}
+              addtocart={addtocart}
             />
           }
         />
+        <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
       </Routes>
     </>
   );
