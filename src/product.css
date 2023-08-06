@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.products {
+    padding: 30px 40px;
+    width: 100%;
+}
+
+.products h2 {
+    font-size: 42px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #010f1c;
+}
+
+.products p{
+    margin-top: 20px;
+    color: #9a9a9a;
+}
+
+.products .container {
+    margin-top: 20px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.products .container .filter {
+    padding: 20px 30px;
+}
+
+.products .container .filter .categories h3 {
+    color: #010f1c;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.products .container .filter .categories ul{
+    margin-top: 10px;
+}
+
+.products .container .filter .categories ul li{
+    list-style: none;
+    margin-top: 20px;
+    color: #010f1c;
+    cursor: pointer;
+}
+
+.products .container .productbox {
+    margin-right: 0%;
+}
+
+.products .container .productbox .contant{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.products .container .productbox .contant .box{
+    padding: 10px 20px;
+    overflow: hidden;
+    width: 300px;
+    height: 370px;
+    border: 1px solid #e2e0e0;
+    margin-bottom: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.products .container .productbox .contant .box:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.products .container .productbox .contant .box .img_box{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e2e0e0;
+}
+
+.products .container .productbox .contant .box .img_box img{
+    width: 300px;
+    height: 250px;
+    margin-right: 50px;
+}
+
+.products .container .productbox .contant .box .img_box .icon{
+    z-index: 1;
+    position: relative;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    transition: 0.5s;
+}
+
+.products .container .productbox .contant .box:hover .img_box .icon{
+    transform: translateX(-75px);
+}
+
+.products .container .productbox .contant .box .img_box .icon li{
+    list-style: none;
+    padding: 10px 10px;
+    color: #010f1c;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: #fff;
+    transition: 0.5s;
+}
+
+.products .container .productbox .contant .box .img_box .icon li:hover{
+    background: #0989ff;
+    color: #fff;
+}
+
+.products .container .productbox .contant .box .detail{
+    margin-top: 10px;
+}
+
+.products .container .productbox .contant .box .detail h3{
+    font-size: 16px;
+    margin-top: 5px;
+    color: #010f1c;
+    transition: 0.5s;
+}
+
+.products .container .productbox .contant .box:hover .detail h3{
+    color: #0989ff;
+}
+
+.products .container .productbox .contant .box .detail h4{
+    margin-top: 5px;
+    font-size: 14px;
+    color: #0989ff;
+    letter-spacing: 1px;
+}
+
+.product_detail{
+    margin-top: 30px;
+    padding: 30px 40px;
+    width: 100%;
+    height: 120%;
+    position: fixed;
+    z-index: 1;
+    margin-top: -20%;
+    background: rgba(0, 0, 0, 0.24);
+}
+
+.product_detail .container {
+    margin-top: 5%;
+    margin-left: 10%;
+    width: 1000px;
+    height: 550px;
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.product_detail .container .closebtn{
+    margin-left: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.product_detail .container .productbox{
+    max-width: 100%;
+    display: flex;
+    padding: 20px 30px;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.product_detail .container .productbox .img-box{
+    padding: 20px 30px;
+    width: 315px;
+    height: 370px;
+    background: #f1f1f1;
+}
+
+.product_detail .container .productbox img{
+    width: 250px;
+    height: 250px;
+}
+
+.product_detail .container .productbox .detail{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.product_detail .container .productbox .detail h4{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 200;
+    color: #9a9a9a;
+    letter-spacing: 1px;
+}
+
+.product_detail .container .productbox .detail h2{
+    margin-top: 20px;
+    font-size: 32px;
+    color: #010f1c;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.product_detail .container .productbox .detail p{
+    margin-top: 10px;
+    color: #4a4a4a;
+}
+
+.product_detail .container .productbox .detail h3{
+    margin-top: 10px;
+    color: #0989ff;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+.product_detail .container .productbox .detail button{
+    margin: 30px;
+    padding: 15px 60px;
+    font-size: 16px;
+    color: #fff;
+    background: #010f1c;
+    transition: 0.5s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.product_detail .container .productbox .detail button:hover{
+    background: #0989ff;
+}
