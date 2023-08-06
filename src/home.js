@@ -32,7 +32,7 @@ const Home = ({ detail, view, close, setClose, addtocart }) => {
                     <h4>{curlElm.Cat}</h4>
                     <h2>{curlElm.Title}</h2>
                     <p>{curlElm.Can}</p>
-                    <h3>{curlElm.Price}</h3>
+                    <h3>${curlElm.Price}</h3>
                     <button>Agregar al Carrito</button>
                   </div>
                 </div>
@@ -130,7 +130,7 @@ const Home = ({ detail, view, close, setClose, addtocart }) => {
                 <div className="detail">
                   <p>{curlElm.Cat}</p>
                   <h3>{curlElm.Title}</h3>
-                  <h4>{curlElm.Price}</h4>
+                  <h4>${curlElm.Price}</h4>
                 </div>
               </div>
             );

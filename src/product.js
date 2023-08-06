@@ -107,7 +107,7 @@ const Product = ({
                       <div className="detail">
                         <p>{curlElm.Cat}</p>
                         <h3>{curlElm.Title}</h3>
-                        <h4>{curlElm.Price}</h4>
+                        <h4>${curlElm.Price}</h4>
                       </div>
                     </div>
                   </>
