@@ -1,10 +1,14 @@
 import React from "react";
 import Productdetails from "./productdetail";
-import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
+import {
+  AiOutlineHeart,
+  AiOutlineShoppingCart,
+  AiOutlineCloseCircle,
+} from "react-icons/ai";
 import { BsEye } from "react-icons/bs";
 import "./product.css";
 
-const Product = ({ product, setProduct }) => {
+const Product = ({ product, setProduct, detail, view, close, setClose }) => {
   const filterproduct = (product) => {
     const update = Productdetails.filter((x) => {
       return x.Cat === product;
@@ -18,6 +22,32 @@ const Product = ({ product, setProduct }) => {
 
   return (
     <>
+      {close ? (
+        <div className="product_detail">
+          <div className="container">
+            <button onClick={() => setClose(false)} className="closebtn">
+              <AiOutlineCloseCircle />
+            </button>
+            {detail.map((curlElm) => {
+              return (
+                <div className="productbox" key={curlElm.id}>
+                  <div className="img-box">
+                    <img src={curlElm.Img} alt={curlElm.Title} />
+                  </div>
+                  <div className="detail">
+                    <h4>{curlElm.Cat}</h4>
+                    <h2>{curlElm.Title}</h2>
+                    <p>{curlElm.Can}</p>
+                    <h3>{curlElm.Price}</h3>
+                    <button>Agregar al Carrito</button>
+                  </div>
+                </div>
+              );
+            })}
+            <div className="productbox"></div>
+          </div>
+        </div>
+      ) : null}
       <div className="products">
         <h3># Productos</h3>
         <p>Inicio . Productos</p>
@@ -58,7 +88,7 @@ const Product = ({ product, setProduct }) => {
                           <li>
                             <AiOutlineShoppingCart />
                           </li>
-                          <li>
+                          <li onClick={() => view(curlElm)}>
                             <BsEye />
                           </li>
                           <li>
