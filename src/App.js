@@ -4,6 +4,7 @@ import Rout from "./rout";
 import { BrowserRouter } from "react-router-dom";
 import Footer from "./footer";
 import Productdetails from "./productdetail";
+import toast, { Toaster } from "react-hot-toast";
 
 const App = () => {
   //add to cart
@@ -34,16 +35,17 @@ const App = () => {
       return x.id === product.id;
     });
     if (exsit) {
-      alert("Este producto ya se encuentra agregado al carrito");
+      toast.error("Este producto ya se encuentra agregado al carrito");
     } else {
       setCart([...cart, { ...product, qty: 1 }]);
-      alert("Producto agregado al carrito");
+      toast.success("Producto agregado al carrito");
     }
   };
 
   return (
     <>
       <BrowserRouter>
+        <Toaster />
         <Nav searchbtn={searchbtn} />
         <Rout
           product={product}
