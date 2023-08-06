@@ -71,22 +71,28 @@ const Cart = ({ cart, setCart }) => {
                   <img src={curElm.Img} alt={curElm.Title} />
                 </div>
                 <div className="detail">
-                  <h4>{curElm.Cat}</h4>
-                  <h3>{curElm.Title}</h3>
-                  <p>precio: ${curElm.Price}</p>
-                  <div className="qty">
-                    <button className="incqty" onClick={() => incqty(curElm)}>
-                      +
-                    </button>
-                    <input type="text" value={curElm.qty}></input>
-                    <button className="decqty" onClick={() => decqty(curElm)}>
-                      -
+                  <div className="info">
+                    <h4>{curElm.Cat}</h4>
+                    <h3>{curElm.Title}</h3>
+                    <p>Precio: ${curElm.Price}</p>
+                    <div className="qty">
+                      <button className="decqty" onClick={() => decqty(curElm)}>
+                        -
+                      </button>
+                      <input type="text" value={curElm.qty}></input>
+                      <button className="incqty" onClick={() => incqty(curElm)}>
+                        +
+                      </button>
+                    </div>
+                    <h4 className="subtotal">
+                      Sub Total: ${curElm.Price * curElm.qty}
+                    </h4>
+                  </div>
+                  <div className="close">
+                    <button onClick={() => removeproduct(curElm)}>
+                      <AiOutlineClose />
                     </button>
                   </div>
-                  <h4>sub total: ${curElm.Price * curElm.qty}</h4>
-                  <button onClick={() => removeproduct(curElm)}>
-                    <AiOutlineClose />
-                  </button>
                 </div>
               </div>
             );
@@ -94,8 +100,8 @@ const Cart = ({ cart, setCart }) => {
         </div>
         {cart.length > 0 && (
           <>
-            <h2 className="totalprice"> ${Totaprice} </h2>
-            <button className="checkout">Factura</button>
+            <h2 className="totalprice">Total: $ {Totaprice} </h2>
+            <button className="checkout">Facturar</button>
           </>
         )}
       </div>
