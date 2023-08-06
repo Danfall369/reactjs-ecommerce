@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import Productdetails from "./productdetail";
 import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
 import { BsEye } from "react-icons/bs";
 import "./product.css";
 
-const Product = () => {
-  const [product, setProduct] = useState(Productdetails);
+const Product = ({ product, setProduct }) => {
   const filterproduct = (product) => {
     const update = Productdetails.filter((x) => {
       return x.Cat === product;

@@ -7,7 +7,7 @@ import { CiLogin, CiLogout } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 
-const Nav = () => {
+const Nav = ({ searchbtn }) => {
   const [search, setSearch] = useState();
   const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
 
@@ -33,7 +33,7 @@ const Nav = () => {
               autoComplete="off"
               onChange={(e) => setSearch(e.target.value)}
             />
-            <button>Buscar</button>
+            <button onClick={() => searchbtn(search)}>Buscar</button>
           </div>
           <div className="icon">
             {isAuthenticated && (
