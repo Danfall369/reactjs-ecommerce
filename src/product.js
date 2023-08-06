@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Productdetails from "./productdetail";
 import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
 import { BsEye } from "react-icons/bs";
 import "./product.css";
 
 const Product = () => {
+  const [product, setProduct] = useState(Productdetails);
+  const filterproduct = (product) => {
+    const update = Productdetails.filter((x) => {
+      return x.Cat === product;
+    });
+    setProduct(update);
+  };
+
+  const AllProducts = () => {
+    setProduct(Productdetails);
+  };
+
   return (
     <>
       <div className="products">
@@ -15,22 +27,29 @@ const Product = () => {
             <div className="categories">
               <h3>Categories</h3>
               <ul>
-                <li>Bebidas</li>
-                <li>Enlatados</li>
-                <li>Harinas</li>
-                <li>Lacteos</li>
-                <li>Cereales</li>
-                <li>Salsas y Aderezos</li>
-                <li>Arroz</li>
-                <li>Endulzantes</li>
-                <li>Margarinas y Aceites</li>
-                <li>Pastas</li>
+                <li onClick={() => AllProducts()}>Todos Los Productos</li>
+                <li onClick={() => filterproduct("Bebidas")}>Bebidas</li>
+                <li onClick={() => filterproduct("Enlatados")}>Enlatados</li>
+                <li onClick={() => filterproduct("Harinas")}>Harinas</li>
+                <li onClick={() => filterproduct("Lacteos")}>Lacteos</li>
+                <li onClick={() => filterproduct("Cereales")}>Cereales</li>
+                <li onClick={() => filterproduct("Salsas y Aderezos")}>
+                  Salsas y Aderezos
+                </li>
+                <li onClick={() => filterproduct("Arroz")}>Arroz</li>
+                <li onClick={() => filterproduct("Endulzantes")}>
+                  Endulzantes
+                </li>
+                <li onClick={() => filterproduct("Margarinas y Aceites")}>
+                  Margarinas y Aceites
+                </li>
+                <li onClick={() => filterproduct("Pastas")}>Pastas</li>
               </ul>
             </div>
           </div>
           <div className="productbox">
             <div className="contant">
-              {Productdetails.map((curlElm) => {
+              {product.map((curlElm) => {
                 return (
                   <>
                     <div className="box" key={curlElm.id}>

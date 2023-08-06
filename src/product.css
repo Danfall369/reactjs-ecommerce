@@ -72,6 +72,7 @@
     transition: 0.5s;
     cursor: pointer;
     border-radius: 5px;
+    margin-right: 20px;
 }
 
 .products .container .productbox .contant .box:hover{
