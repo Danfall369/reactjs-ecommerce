@@ -12,8 +12,11 @@ import {
   AiOutlineShoppingCart,
   AiOutlineCloseCircle,
 } from "react-icons/ai";
+import { useAuth0 } from "@auth0/auth0-react";
 
-const Home = ({ detail, view, close, setClose }) => {
+const Home = ({ detail, view, close, setClose, addtocart }) => {
+  const { loginWithRedirect, isAuthenticated } = useAuth0();
+
   return (
     <>
       {close ? (
@@ -32,7 +35,7 @@ const Home = ({ detail, view, close, setClose }) => {
                     <h4>{curlElm.Cat}</h4>
                     <h2>{curlElm.Title}</h2>
                     <p>{curlElm.Can}</p>
-                    <h3>{curlElm.Price}</h3>
+                    <h3>${curlElm.Price}</h3>
                     <button>Agregar al Carrito</button>
                   </div>
                 </div>
@@ -116,9 +119,15 @@ const Home = ({ detail, view, close, setClose }) => {
                 <div className="img_box">
                   <img src={curlElm.Img} alt={curlElm.Title} />
                   <div className="icon">
-                    <li>
-                      <AiOutlineShoppingCart />
-                    </li>
+                    {isAuthenticated ? (
+                      <li onClick={() => addtocart(curlElm)}>
+                        <AiOutlineShoppingCart />
+                      </li>
+                    ) : (
+                      <li onClick={() => loginWithRedirect()}>
+                        <AiOutlineShoppingCart />
+                      </li>
+                    )}
                     <li onClick={() => view(curlElm)}>
                       <BsEye />
                     </li>
@@ -130,7 +139,7 @@ const Home = ({ detail, view, close, setClose }) => {
                 <div className="detail">
                   <p>{curlElm.Cat}</p>
                   <h3>{curlElm.Title}</h3>
-                  <h4>{curlElm.Price}</h4>
+                  <h4>${curlElm.Price}</h4>
                 </div>
               </div>
             );
