@@ -12,8 +12,11 @@ import {
   AiOutlineShoppingCart,
   AiOutlineCloseCircle,
 } from "react-icons/ai";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Home = ({ detail, view, close, setClose, addtocart }) => {
+  const { loginWithRedirect, isAuthenticated } = useAuth0();
+
   return (
     <>
       {close ? (
@@ -116,9 +119,15 @@ const Home = ({ detail, view, close, setClose, addtocart }) => {
                 <div className="img_box">
                   <img src={curlElm.Img} alt={curlElm.Title} />
                   <div className="icon">
-                    <li onClick={() => addtocart(curlElm)}>
-                      <AiOutlineShoppingCart />
-                    </li>
+                    {isAuthenticated ? (
+                      <li onClick={() => addtocart(curlElm)}>
+                        <AiOutlineShoppingCart />
+                      </li>
+                    ) : (
+                      <li onClick={() => loginWithRedirect()}>
+                        <AiOutlineShoppingCart />
+                      </li>
+                    )}
                     <li onClick={() => view(curlElm)}>
                       <BsEye />
                     </li>

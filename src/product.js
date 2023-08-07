@@ -7,6 +7,7 @@ import {
 } from "react-icons/ai";
 import { BsEye } from "react-icons/bs";
 import "./product.css";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Product = ({
   product,
@@ -17,6 +18,8 @@ const Product = ({
   setClose,
   addtocart,
 }) => {
+  const { loginWithRedirect, isAuthenticated } = useAuth0();
+
   const filterproduct = (product) => {
     const update = Productdetails.filter((x) => {
       return x.Cat === product;
@@ -93,9 +96,15 @@ const Product = ({
                       <div className="img_box">
                         <img src={curlElm.Img} alt={curlElm.Title} />
                         <div className="icon">
-                          <li onClick={() => addtocart(curlElm)}>
-                            <AiOutlineShoppingCart />
-                          </li>
+                          {isAuthenticated ? (
+                            <li onClick={() => addtocart(curlElm)}>
+                              <AiOutlineShoppingCart />
+                            </li>
+                          ) : (
+                            <li onClick={() => loginWithRedirect()}>
+                              <AiOutlineShoppingCart />
+                            </li>
+                          )}
                           <li onClick={() => view(curlElm)}>
                             <BsEye />
                           </li>
