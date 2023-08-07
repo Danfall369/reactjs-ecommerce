@@ -36,7 +36,15 @@ const Home = ({ detail, view, close, setClose, addtocart }) => {
                     <h2>{curlElm.Title}</h2>
                     <p>{curlElm.Can}</p>
                     <h3>${curlElm.Price}</h3>
-                    <button>Agregar al Carrito</button>
+                    {isAuthenticated ? (
+                      <button onClick={() => addtocart(curlElm)}>
+                        Agregar al Carrito
+                      </button>
+                    ) : (
+                      <button onClick={() => loginWithRedirect()}>
+                        Agregar al Carrito
+                      </button>
+                    )}
                   </div>
                 </div>
               );

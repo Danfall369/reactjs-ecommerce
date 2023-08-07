@@ -70,11 +70,11 @@ const Nav = ({ searchbtn }) => {
                   Productos
                 </Link>
               </li>
-              <li>
+              {/*               <li>
                 <Link to="/about" className="link">
                   Sobre Nosotros
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/contact" className="link">
                   Contactanos
