@@ -11,7 +11,7 @@ const Footer = () => {
                 <div className='container'>
                     <div className='about'>
                         <div className='logo'>
-                            <img src='./img/logo.png' alt='logo' width='50px' /><p>Multitiendas E.A.F</p>
+                            <img src='./img/logo.png' alt='logo' width='50px' /><p>Mi Espacio Saludable</p>
                         </div>
                         <div className='detail'>
                             <p>Somos vendedores mayoristas de la mejor mercancia seleccionada</p>
