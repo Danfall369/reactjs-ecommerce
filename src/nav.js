@@ -23,7 +23,7 @@ const Nav = ({ searchbtn }) => {
         <div className="container">
           <div className="logo">
             <img src="./img/logo.png" alt="logo" width="50px" />
-            <p>Multitiendas E.A.F</p>
+            <p>Mi Espacio Saludable</p>
           </div>
           <div className="search_box">
             <input
